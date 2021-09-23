@@ -1,0 +1,72 @@
+<style>
+    body {
+      margin: 25px;
+    }
+  
+    #main {
+      position: relative;
+      margin: 50px 0;
+    }
+  
+    canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  
+    #description {
+      margin-top: 20px;
+      width: 600px;
+    }
+  
+    #description-title {
+      font-weight: bold;
+      font-size: 18px;
+    }
+  </style>
+  
+  <body>
+    <div id="main">
+      <video id="video" playsinline style="
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        /* -webkit-transform: scaleX(-1);
+        transform: scaleX(-1); */
+        width: auto;
+        height: auto;
+        ">
+      </video>
+      <canvas id="output" style="
+      /* -webkit-transform: scaleX(-1);
+      transform: scaleX(-1); */
+      "></canvas>
+    </div>
+
+    <canvas id="eyes" width="100" height="50" style="
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    /* -webkit-transform: scaleX(-1);
+    transform: scaleX(-1); */
+    "></canvas>
+
+
+    <button id="train">Train!</button>
+    <style>
+        #train {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24pt;
+        }
+    </style>
+
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.6/dat.gui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/stats.js/r16/Stats.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/blazeface"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis"></script>
+  <script src="main.js"></script>
